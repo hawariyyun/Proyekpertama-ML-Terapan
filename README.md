@@ -56,7 +56,7 @@ Penggunaan Machine Learning seperti SVM, RBF, Recurrent Neural Network : Long-So
   Normalisasi dibutuhkan supaya data berada pada rentang 0 sampai 1, sehingga dapat mempermudah proses kalkulasi pada model.
 
 # Pembuatan Model
-  ##Pembuatan model RNN:LSTM
+  ## Pembuatan model RNN:LSTM
   Penggunaan LSTM karena seiring bertambahnya dataset, LSTM dapat mengingat kembali hasil pelatihan yang lama (memori tidak terkikis), berbeda dengan RNN sederhana yang dapat kehilangan performa seiring bertambahnya data.<br>
   Melakukan summary terhadap model.<br>
   Terdapat 4 layer LSTM pada model.<br>
