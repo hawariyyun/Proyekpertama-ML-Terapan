@@ -6,10 +6,10 @@
   
 # Domain Permasalahan
   **Prediksi Harga Saham Menggunakan Long-Sort Term Memory Recurrent Neural Network : Studi Kasus Saham Aneka Tambang Tbk**
-  PT Aneka Tambang Tbk adalah anak perusahaan BUMN pertambangan Inalum. Aneka Tambang Tbk memiliki aset yang diperjual-belikan pada pasar investasi berupa saham, dalam dunia ekonomi dan bisnis menjadi sebuah bidang yang tidak bisa ditinggalkan dalam kehidupan. Ekonomi dan bisnis berhubungan erat dengan sebuah proses yang dinamakan jual-beli. Pada masa sekarang terdapat sebuah proses jual-beli yang sangat populer dan menjanjikan bagi pelaku jual-belinya. Proses tersebut adalah jual-beli bukti kepemilikan sebuah perusahaan (saham).
-  Jual-beli saham dengan istilahnya *trading* atau investasi saham, menjadi hal yang dapat memberikan keuntungan atau kerugian yang besar bagi para pelakunya. Jika seorang salah dalam menganalisis kemungkinan naik dan turunnya harga saham, maka dapat mengakibatkan kerugian. Naik-turunnya harga ini dapat dipengaruhi berbagai hal, seperti adanya fluktuasi kurs rupiah terhadap mata uang asing, kebijakan pemerintah, faktor fundamental perusahaan, dan sebagainya.
+  PT Aneka Tambang Tbk adalah anak perusahaan BUMN pertambangan Inalum. Aneka Tambang Tbk memiliki aset yang diperjual-belikan pada pasar investasi berupa saham, dalam dunia ekonomi dan bisnis menjadi sebuah bidang yang tidak bisa ditinggalkan dalam kehidupan. Ekonomi dan bisnis berhubungan erat dengan sebuah proses yang dinamakan jual-beli. Pada masa sekarang terdapat sebuah proses jual-beli yang sangat populer dan menjanjikan bagi pelaku jual-belinya. Proses tersebut adalah jual-beli bukti kepemilikan sebuah perusahaan (saham).<br>
+  Jual-beli saham dengan istilahnya *trading* atau investasi saham, menjadi hal yang dapat memberikan keuntungan atau kerugian yang besar bagi para pelakunya. Jika seorang salah dalam menganalisis kemungkinan naik dan turunnya harga saham, maka dapat mengakibatkan kerugian. Naik-turunnya harga ini dapat dipengaruhi berbagai hal, seperti adanya fluktuasi kurs rupiah terhadap mata uang asing, kebijakan pemerintah, faktor fundamental perusahaan, dan sebagainya.<br>
   (Shunrong dkk., 2012) menyatakan bahwa analisis dan prediksi menggunakan Machine Learning terhadap saham sudah menjadi permasalahan yang terjadi sejak lama, dan mengemukakan algoritma Support Vector Machine dalam pemecahan masalahnya dengan akurasi melebihi 74% pada prediksi tiga saham.
-Menggunakan algoritma machine learning untuk permasalahan prediksi harga saham dapat membantu para pelaku bisnis ini dalam mengambil keputusan prediksinya, beberapa algoritma yang dapat diandalkan adalah SVM dan Radial Basis Function (RBF) (Kranthi, 2018).
+Menggunakan algoritma machine learning untuk permasalahan prediksi harga saham dapat membantu para pelaku bisnis ini dalam mengambil keputusan prediksinya, beberapa algoritma yang dapat diandalkan adalah SVM dan Radial Basis Function (RBF) (Kranthi, 2018).<br>
 Penggunaan Machine Learning seperti SVM, RBF, Recurrent Neural Network : Long-Sort Term Memory dan sebagainya dalam prediksi merupakan sebuah hal yang dapat diterapkan untuk menghindarkan pelaku bisnis dari pengambilan keputusan pembelian saham yang tidak beralasan atau asal-asalan sehingga dapat meminimalkan kerugian.
 **REFERENSI :**
 
@@ -57,9 +57,9 @@ Penggunaan Machine Learning seperti SVM, RBF, Recurrent Neural Network : Long-So
 
 # Pembuatan Model
   ##Pembuatan model RNN:LSTM
-  Penggunaan LSTM karena seiring bertambahnya dataset, LSTM dapat mengingat kembali hasil pelatihan yang lama (memori tidak terkikis), berbeda dengan RNN sederhana yang dapat kehilangan performa seiring bertambahnya data.
-  Melakukan summary terhadap model.
-  Terdapat 4 layer LSTM pada model.
+  Penggunaan LSTM karena seiring bertambahnya dataset, LSTM dapat mengingat kembali hasil pelatihan yang lama (memori tidak terkikis), berbeda dengan RNN sederhana yang dapat kehilangan performa seiring bertambahnya data.<br>
+  Melakukan summary terhadap model.<br>
+  Terdapat 4 layer LSTM pada model.<br>
   ## Pelatihan pada data latih (*Training*)
 *   Melakukan deklarasi callbacks EarlyStopping untuk memperkecil resourse yang digunakan
 *   Melakukan kompilasi terhadap model menggunakan parameter optimizer = 'adam' dan loss = 'mean_squared_error'
@@ -76,7 +76,7 @@ Penggunaan Machine Learning seperti SVM, RBF, Recurrent Neural Network : Long-So
   Nilai yang didapat masing-masingnya :
   * mse   : 2160.29893007192
   * mae   : 24.989811694528175
-  * rmse  : 46.47901601875754
+  * rmse  : 46.47901601875754 <br>
   Dapat diketahui nilai pada masing-masing variabel evaluasi menunjukkan nilai yang besar, namun ini tidak menjadi masalah karena nilai/harga pada data berupa nilai/harga yang cukup besar berkisar antar Rp.287-Rp.4241. pada **MAE** selisih rata-rata antar harga prediksi dan harga sebenarnya diperoleh sebesar 24.9 yang bisa dikatakan sangat kecil mendekati Rp.25
   Sedangkan pada **RMSE** menunjukkan nilai selisih rata-rata sebesar 46.5 lebih kecil dari Rp.50
   
