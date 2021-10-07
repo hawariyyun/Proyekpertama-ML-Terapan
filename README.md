@@ -1,7 +1,7 @@
 # Proyek-ML-Terapan
 # Data Diri
-  Rifki Ramadani
-  Machine Learning Terapan
+  Rifki Ramadani <br>
+  Machine Learning Terapan <br>
   Kabupaten Pasaman, Sumatera Barat
   
 # Domain Permasalahan
@@ -77,8 +77,9 @@ Penggunaan Machine Learning seperti SVM, RBF, Recurrent Neural Network : Long-So
   * mse   : 2160.29893007192
   * mae   : 24.989811694528175
   * rmse  : 46.47901601875754 <br>
-  Dapat diketahui nilai pada masing-masing variabel evaluasi menunjukkan nilai yang besar, namun ini tidak menjadi masalah karena nilai/harga pada data berupa nilai/harga yang cukup besar berkisar antar Rp.287-Rp.4241. pada **MAE** selisih rata-rata antar harga prediksi dan harga sebenarnya diperoleh sebesar 24.9 yang bisa dikatakan sangat kecil mendekati Rp.25
-  Sedangkan pada **RMSE** menunjukkan nilai selisih rata-rata sebesar 46.5 lebih kecil dari Rp.50
+  Dapat diketahui nilai pada masing-masing variabel evaluasi menunjukkan nilai yang besar, namun ini tidak menjadi masalah karena nilai/harga pada data berupa nilai/harga yang cukup besar berkisar antar Rp.287-Rp.4241. pada **MAE** selisih rata-rata antar harga prediksi dan harga sebenarnya diperoleh sebesar 24.9 yang bisa dikatakan sangat kecil mendekati Rp.25 <br>
+  Sedangkan pada **RMSE** menunjukkan nilai selisih rata-rata sebesar 46.5 lebih kecil dari Rp.50 <br>
+  Menggabungkan hasil prediksi dan harga sebenarnya menjadi satu dataset disimpan dalam variabel dataDif untuk melihat perbedaan langsung antara keduanya.
   
   ## Prediksi harga saham antm pada hari berikutnya (4 Februari 2021)
   Harga saham prediksi pada hari selanjutnya yaitu pada 4 Februari 2021 adalah Rp.2235
