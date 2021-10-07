@@ -27,3 +27,58 @@ Penggunaan Machine Learning seperti SVM, RBF, Recurrent Neural Network : Long-So
 1.   Menggunakan algoritma Recurrent Neural Network : LSTM (Long-Short Term Memory)
 2.   Menggunakan metriks evaluasi MSE, MAE, dan RMSE untuk mengetahui besarnya selisih antara harga saham sebenarnya dengan harga saham hasil prediksi model LSTM
 
+# Memahami Data
+  Dataset diberi nama 'anekatambangtbk.csv', merupakan dataset harga saham harian yang saat itu diperdagangkan ANTM.JK bahkan sampai saat ini. Dataset berupa dataset time series dengan rentang waktu antar 29 September 2005 sampai 3 Februari 2021.Dataset yang digunakan berasal dari website penyedia dataset kaggle.com dengan detail url : https://www.kaggle.com/muhardianabasandi/antam-stock-market-by-kitto
+  ## Penjelasan Fitur
+  Fitur-fitur yang tersedia pada dataset :
+
+*   Date : Merupakan fitur/variabel penyimpan berupa timeseries tahun 2005 sampai 2021
+*   Open : Harga pembuka harian
+*   High : Harga tertinggi harian
+*   Low : Harga terendah harian
+*   Close : Harga penutupan harian
+*   Adj. Close : Penyesuaian harga penutupan harian
+*   Volume : Jumlah saham yang diperjualbelikan
+  ## Import Library
+  Library yang dibutuhkan selama pembangunan model prediksi
+  ## Membaca Data
+  Dataset dibaca menggunakan library pandas dan melakukan pemisahan antara fitur tanggal dengan fitur lainnya. Setelah membaca dataset, dataset tersebut dideskripsikan menggunakan fungsi describe() yang telah disediakan library pandas
+  ## Visualisasi awal dataset kolom 'Close'
+  Visualisasi data menggunakan nilai pada kolom 'Close', karena variabel/fitur ini akan kita gunakan sebagai acuan dalam prediksi. Kolom 'Close' digunakan karena prediksi/forecasting yang akan dilakukan pada dataset ini adalah prediksi terhadap harga saham penutupan harian, hal ini berguna sebagai acuan bagi investor dalam melakukan transaksi (*trading*) maupun investasi dalam jangka waktu harian. Jadi, prediksi yang akan dilakukan berupa prediksi saham harian, harga penutup menjadi penentu apakah investor maupun trader untung atau rugi pada hari itu
+  
+# Persiapan Data
+  ## Membersihkan data
+  Melakukan pengecekan pada data, apakah terdapat data dengan nilai kosong pada dataset menggunakan fungsi isnull(). Selanjutnya jika terdapat data kosong, data kosong tersebut dibuang menggunakan fungsi drop()
+  ## Membagi data menjadi train_data dan test_data
+  Sebelum melakukan pembagian data, lakukan pengecekan terhadap persantase nilai selisih harian dari harga penutupan saham, menggunakan visualisasi persentase selisih harga saham penutupan harian. Selanjutnya, membagi dataset menjadi 80% train_data dan 20% test_data beserta visualisasinya.
+  Untuk proses training kita menggunakan data pada kolom 'Close'
+  ## Normalisasi Menggunakan MinMaxScaler()
+  Normalisasi dibutuhkan supaya data berada pada rentang 0 sampai 1, sehingga dapat mempermudah proses kalkulasi pada model.
+
+# Pembuatan Model
+  ##Pembuatan model RNN:LSTM
+  Penggunaan LSTM karena seiring bertambahnya dataset, LSTM dapat mengingat kembali hasil pelatihan yang lama (memori tidak terkikis), berbeda dengan RNN sederhana yang dapat kehilangan performa seiring bertambahnya data.
+  Melakukan summary terhadap model.
+  Terdapat 4 layer LSTM pada model.
+  ## Pelatihan pada data latih (*Training*)
+*   Melakukan deklarasi callbacks EarlyStopping untuk memperkecil resourse yang digunakan
+*   Melakukan kompilasi terhadap model menggunakan parameter optimizer = 'adam' dan loss = 'mean_squared_error'
+*   Melakukan pelatihan (training) menggunakan model.fit dengan parameter X_train, y_train, nilai epochs=500, step_per_epoch=48, dan batch_size=64
+  ## Prediksi
+  Prediksi dilakukan dengan menggabungkan train_data dan test_data, setelah itu mengambil test_inputs dan melakukan skalar/normalisasi pada test_inputs.
+  Mengambil nilai X_test dari test_data berdasarkan test_inputs dan melakukan prediksi dengan menggunakan fungsi model.predict() dan melakukan skalar terhadap hasil prediksi agar kembali menjadi bentuk asli dari data.
+
+# Evaluasi
+  ## Visualisasi harga saham pada pelatihan, harga sebenarnya dan harga prediksi
+  Sebelum melakukan perhitungan terhadap error pada hasil prediksi, lakukan visualisasi hasil prediksi terlebih dahulu agar dapat memahami seberapa besar perbandingan hasil prediksi dan harga sebenarnya.
+  ### MSE, MAE, dan RMSE
+  Perhitungan selisih antara harga saham hasil prediksi dan harga saham sebenarnya menggunakan tiga metriks evaluasi yaitu MSE, MAE, dan RMSE.
+  Nilai yang didapat masing-masingnya :
+  * mse   : 2160.29893007192
+  * mae   : 24.989811694528175
+  * rmse  : 46.47901601875754
+  Dapat diketahui nilai pada masing-masing variabel evaluasi menunjukkan nilai yang besar, namun ini tidak menjadi masalah karena nilai/harga pada data berupa nilai/harga yang cukup besar berkisar antar Rp.287-Rp.4241. pada **MAE** selisih rata-rata antar harga prediksi dan harga sebenarnya diperoleh sebesar 24.9 yang bisa dikatakan sangat kecil mendekati Rp.25
+  Sedangkan pada **RMSE** menunjukkan nilai selisih rata-rata sebesar 46.5 lebih kecil dari Rp.50
+  
+  ## Prediksi harga saham antm pada hari berikutnya (4 Februari 2021)
+  Harga saham prediksi pada hari selanjutnya yaitu pada 4 Februari 2021 adalah Rp.2235
