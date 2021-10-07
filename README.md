@@ -10,7 +10,7 @@
   Jual-beli saham dengan istilahnya *trading* atau investasi saham, menjadi hal yang dapat memberikan keuntungan atau kerugian yang besar bagi para pelakunya. Jika seorang salah dalam menganalisis kemungkinan naik dan turunnya harga saham, maka dapat mengakibatkan kerugian. Naik-turunnya harga ini dapat dipengaruhi berbagai hal, seperti adanya fluktuasi kurs rupiah terhadap mata uang asing, kebijakan pemerintah, faktor fundamental perusahaan, dan sebagainya.<br>
   (Shunrong dkk., 2012) menyatakan bahwa analisis dan prediksi menggunakan Machine Learning terhadap saham sudah menjadi permasalahan yang terjadi sejak lama, dan mengemukakan algoritma Support Vector Machine dalam pemecahan masalahnya dengan akurasi melebihi 74% pada prediksi tiga saham.
 Menggunakan algoritma machine learning untuk permasalahan prediksi harga saham dapat membantu para pelaku bisnis ini dalam mengambil keputusan prediksinya, beberapa algoritma yang dapat diandalkan adalah SVM dan Radial Basis Function (RBF) (Kranthi, 2018).<br>
-Penggunaan Machine Learning seperti SVM, RBF, Recurrent Neural Network : Long-Sort Term Memory dan sebagainya dalam prediksi merupakan sebuah hal yang dapat diterapkan untuk menghindarkan pelaku bisnis dari pengambilan keputusan pembelian saham yang tidak beralasan atau asal-asalan sehingga dapat meminimalkan kerugian.
+Penggunaan Machine Learning seperti SVM, RBF, Recurrent Neural Network : Long-Sort Term Memory dan sebagainya dalam prediksi merupakan sebuah hal yang dapat diterapkan untuk menghindarkan pelaku bisnis dari pengambilan keputusan pembelian saham yang tidak beralasan atau asal-asalan sehingga dapat meminimalkan kerugian.<br>
 **REFERENSI :**
 
 1.   Shen, Shunrong, Dkk. 2012. Stock Market Forecasting Using Machine Learning Algorithms
