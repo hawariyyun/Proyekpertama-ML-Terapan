@@ -16,15 +16,17 @@ Penggunaan Machine Learning seperti SVM, RBF, Recurrent Neural Network : Long-So
 1.   Shen, Shunrong, Dkk. 2012. Stock Market Forecasting Using Machine Learning Algorithms
 2.   Kranthi, V S.R. 2018. Stock Market Prediction Using Machine Learning. *International Research Journal of Engineering and Technology (IRJET)*, 5(10), pp. 1032-1035 
 
-# Memahami Segi Bisnis
-  ## Permasalahan
-1.   Bagaimana algoritma LSTM dapat melakukan prediksi terhadap harga saham terkini?
-2.   Bagaimana akurasi prediksi algoritma RNN:LSTM terhadap harga saham?
+# Permasalahan
+  Berbeda dengan faktor nyata yang dapat dianalisis secara langsung oleh investor ataupun trader untuk menentukan keputusannya dalam berinvestasi. Pergerakan harga saham yang tidak konstan setiap harinya (bisa naik dan bisa turun), dalam keadaan normal dapat mengakibatkan pada pengambilan keputusan yang asal-asalan tanpa analisis dan prediksi yang jelas. Algoritma Machine Learning seperti yang telah dicontohkan pada pernyataan di atas adalah salah satu langkah dalam menghindarkan dari kerugian. <br>
+Karena permasalahan naik dan turunnya harga saham merupakan data sekuensial yang panjang, algoritma Machine Learning Long-Sort Term Memory (LSTM) merupakan salah satu algoritma yang tepat dalam melakukan prediksi karena LSTM merupakan modifikasi dari algoritma Recurrent Neural Network (RNN) yang dapat menyimpan informasi jangka panjang (waktu yang lama). LSTM digunakan untuk menganalisis sekaligus prediksi terhadap harga penutupan harian dengan membandingkan nilai error antara harga asli dan harga hasil prediksi. <br>
+Dalam analisis dan prediksi yang dilakukan oleh algoritma LSTM ini tentu akan muncul beberapa permasalahan seperti berikut :  
+1.   Bagaimana algoritma LSTM dapat melakukan prediksi terhadap harga saham ANTM Tbk terkini?
+2.   Bagaimana akurasi prediksi algoritma RNN:LSTM terhadap harga saham ANTM Tbk?
   ## Tujuan
-1.   Membuat model machine learning yang dapat melakukan prediksi harga saham dengan nilai kesalahan atau error sekecil mungkin
+1.   Mengetahui bagaimana  cara kerja algoritma LSTM dalam melakukan prediksi terhadap harga saham ANTM Tbk.
 2.   Mengetahui perbandingan error antara harga saham sebenarnya dengan harga prediksi model LSTM
   ## Solusi
-1.   Menggunakan algoritma Recurrent Neural Network : LSTM (Long-Short Term Memory)
+1.   Membuat model menggunakan algoritma Recurrent Neural Network : LSTM (Long-Short Term Memory)
 2.   Menggunakan metriks evaluasi MSE, MAE, dan RMSE untuk mengetahui besarnya selisih antara harga saham sebenarnya dengan harga saham hasil prediksi model LSTM
 
 # Memahami Data
